@@ -15,10 +15,11 @@ const User = sequelize.define(
     },
     votes: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: false
     },
   },
   {
+    // ??
     setterMethods: {
       votes() {
         this.setDataValue("votes", this.votes + 1);
@@ -29,6 +30,7 @@ const User = sequelize.define(
         return `${this.id} | ${this.firstName} | ${this.votes}`;
       },
     },
+    // ??
   }
 );
 
